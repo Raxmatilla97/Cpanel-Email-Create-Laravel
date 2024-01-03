@@ -129,34 +129,7 @@ class EmailController extends Controller
         
         curl_close($curl);
 
-        // if (curl_error($curl)) {
-        //     $error = curl_error($curl);
-        //     curl_close($curl);
-        //     Log::error("Email yaratishda xatolik: " . $error);
-        //     return back()->with('error', 'Email hisobini yaratishda xatolik yuz berdi.');
-        // } else {
-        //     $responseData = json_decode($response, true); // JSON javobini massivga aylantirish
-        
-        //     if (isset($responseData['status']) && $responseData['status'] == 1) {
-        //         // Ma'lumotlarni Ma'lumotlar Bazasiga Saqlash
-        //         $user = new Email();
-        //         $user->full_name = Auth::user()->name;
-        //         $user->email = $email;
-        //         $user->password = bcrypt($request->password);
-        //         $user->phone = $request->phone;
-        //         $user->text_info = $request->about;
-        //         $user->user_id = Auth::user()->id;
-        //         $user->save();
-        
-        //         return back()->with('success', 'Foydalanuvchi muvaffaqiyatli qo\'shildi.');
-        //     } else {
-        //         // Xatolik mavjud bo'lsa, xatolik xabarini qaytarish
-        //         $errorMessage = isset($responseData['messages']) ? implode(', ', $responseData['messages']) : 'Noma\'lum xatolik yuz berdi.';
-        //         return back()->with('error', $errorMessage);
-        //     }
-        // }
-        
-        // curl_close($curl);
+       
     }
 
     /**
